@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  max-width: 1040px;
+  margin: 25px auto;
+  padding: 5rem;
+  padding-top: 0;
+}
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.counters {
+  background-color: lightgrey;
+  padding: 7rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
+
+  text-align: left;
+  counter-reset: list-counter;
+  border-radius: 15px;
+}
+.sub-title {
+  position: relative;
+  color: brown;
+}
+
+.sub-title::before {
+  counter-increment: list-counter;
+  content: counter(list-counter);
+  position: absolute;
+  left: -4rem;
+  top: 0;
+  background: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: brown;
+}
